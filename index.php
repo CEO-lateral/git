@@ -1,7 +1,7 @@
 <?php
 
 /*
- * 1
+ * 2
  * Author: Oleg Antipov
  */
 
