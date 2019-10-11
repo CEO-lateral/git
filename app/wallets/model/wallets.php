@@ -9,7 +9,7 @@
 class Wallets {
 
 	//авторизация пользователя
-    public function my_name(){	
+    public function getName(){	
 		echo "Костя2";
 	}
 
