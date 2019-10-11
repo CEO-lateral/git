@@ -9,11 +9,9 @@
 class PublicWalletsController {
 
 	//авторизация пользователя
-    public function authorization(){ echo (new Authorization())->startAuth();
+    public function getExample(){ 
  echo "Костя";
-getExample();
 	}
-
 
 }
 
