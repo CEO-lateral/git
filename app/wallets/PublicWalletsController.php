@@ -9,19 +9,10 @@
 class PublicWalletsController {
 
 	//авторизация пользователя
-    public function authorization(){ echo (new Authorization())->startAuth(); }
-
-    //регистрация пользователя
-    public function registration(){ echo (new Authorization())->startRegistration(); }
-    
-    //проверка токена или ключа
-    
-    //выход из системы
-    
-    //восстановление пароля
-    
-    //восстановление логина
-
+    public function authorization(){ echo (new Authorization())->startAuth();
+ echo "Костя";
+getExample();
+	}
 
 
 }
