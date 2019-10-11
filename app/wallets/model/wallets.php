@@ -6,7 +6,7 @@
  * Has a config in /core/config/database.php
  */
 
-class Wallets {
+class Wallets1 {
 
 	//авторизация пользователя
     public function getName(){	

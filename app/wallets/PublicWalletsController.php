@@ -10,7 +10,7 @@ class PublicWalletsController {
 
 	//авторизация пользователя
     public function getExample(){
-$my_name=new Wallets();
+$my_name=new Wallets1();
       $my_name->getName();
 	}
 
