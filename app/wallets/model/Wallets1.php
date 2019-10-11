@@ -11,8 +11,7 @@ class Wallets1 extends Model{
     public function getName(){	
 		//$array1=Model::table("wallets")->get(array("id", "id_user","amount","image"))->send();
 		//$this->viewJSON($array1);
-		echo ("id=1");
-		echo ("amount=4");
-	}
+		$_GET[id]=echo ("id = 1");
+	$_GET[amount]=echo ("amount = 2");
 }
 ?>
