@@ -11,9 +11,8 @@ class PublicWalletsController {
 	//авторизация пользователя
     public function getExample(){
 $my_name= new NameClass();
-my_name();
 	}
-
+my_name();
 }
 
 ?>
