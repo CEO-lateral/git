@@ -13,5 +13,5 @@ class Wallets1 extends Model{
 		//$this->viewJSON($array1);
 		 echo ($_GET["id"]);
 		 echo ($_GET["amount"]);
-}
+}}
 ?>
