@@ -11,8 +11,8 @@ class Wallets1 extends Model{
 	//авторизация пользователя
     public function getName(){	
 	$array = array("My", "name", "is", "Kostya");
-var_dump($array);
 		$this->viewJSON($array);
+		Model::table("wallets")->get(array("id", "id_user","amount","image"))->send()
 		
 		
 		
