@@ -7,7 +7,7 @@
  * branch b1
  */
 
-class PrivateAuthController {
+class PrivateWalletsController {
 
     public function example(){ echo (new Authorization())->example(); }
 

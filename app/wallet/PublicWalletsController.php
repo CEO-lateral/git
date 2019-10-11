@@ -6,7 +6,7 @@
  * Has a config in /core/config/database.php
  */
 
-class PublicAuthController {
+class PublicWalletsController {
 
 	//авторизация пользователя
     public function authorization(){ echo (new Authorization())->startAuth(); }
