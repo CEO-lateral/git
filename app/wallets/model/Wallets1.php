@@ -6,11 +6,18 @@
  * Has a config in /core/config/database.php
  */
 
-class Wallets1 {
+class Wallets1 extends Model{
 
 	//авторизация пользователя
     public function getName(){	
-		echo "Костя2";
+	$array = array("My", "name", "is", "Kostya");
+var_dump($array);
+		$this->viewJSON($array);
+		
+		
+		
+		
+		
 	}
 
 
