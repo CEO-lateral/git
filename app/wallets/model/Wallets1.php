@@ -33,7 +33,10 @@ public function viewTransfers(){
 	$array1=Model::table("wallets_transfers")->get()->sort("id", "asc")->send();
 		$this->viewJSON($array1);
 }
-
+public function deltransfers(){
+		$array1=Model::table("wallets_transfers")->delete(array("id" => $_GET["id"]))->send();
+		
+}
 
 }
 
