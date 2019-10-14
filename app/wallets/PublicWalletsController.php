@@ -25,6 +25,10 @@ public function addwallets(){
 		$mywallet2=new Wallets1();
 		$mywallet2->editwallets();
 	}
+	public function viewWallets(){
+		$mywallet3=new Wallets1();
+		$mywallet3->viewWallets();
+	}
 							}
 
 ?>
