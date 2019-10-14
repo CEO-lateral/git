@@ -21,6 +21,10 @@ public function addwallets(){
 	$mywallet1=new Wallets1();
 	$mywallet1->addwallets();
 	}
+	public function editwallets(){
+		$mywallet2=new Wallets1();
+		$mywallet2->editwallets();
+	}
 							}
 
 ?>
