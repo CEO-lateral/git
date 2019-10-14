@@ -33,9 +33,13 @@ public function viewTransfers(){
 	$array1=Model::table("wallets_transfers")->get()->sort("id", "asc")->send();
 		$this->viewJSON($array1);
 }
-public function deltransfers(){
+public function delTransfers(){
 		$array1=Model::table("wallets_transfers")->delete(array("id" => $_GET["id"]))->send();
 		
+}
+public function editTransfers(){
+		$array1=Model::table("wallets_transfers")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
+
 }
 
 }

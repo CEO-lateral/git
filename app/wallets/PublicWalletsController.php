@@ -37,6 +37,10 @@ public function addwallets(){
 		$mywallet5=new Wallets1();
 		$mywallet5->delTransfers();	
 	}
+	public function editTransfers(){
+		$mywallet6=new Wallets1();
+		$mywallet6->editTransfers();
+	}
 							}
 
 ?>
