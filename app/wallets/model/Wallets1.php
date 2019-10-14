@@ -19,7 +19,7 @@ public function delwallets(){
 		//$this->viewJSON($array1);
 }	
 public function addwallets(){
-		$array1=Model::table("wallets")->add(array("id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
+		$array1=Model::table("wallets")->add(array("id" => $_GET["id"],"id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
 
 
 }
