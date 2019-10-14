@@ -8,15 +8,17 @@
 
 class PublicWalletsController {
 
-	//авторизация пользователя
-    public function getExample(){
+	
+   /* public function getExample(){
 $my_name=new Wallets1();
       $my_name->getName();
-	}
+	}*/
 	public function addwallets(){
-		
+	$mywallet=new Wallets1();
+	$mywallet->addwallets();	
+	
 	}
 
-}}
+}
 
 ?>
