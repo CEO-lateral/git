@@ -13,9 +13,9 @@ class PublicWalletsController {
 $my_name=new Wallets1();
       $my_name->getName();
 	}*/
-	public function addwallets(){
+	public function delwallets(){
 	$mywallet=new Wallets1();
-	$mywallet->addwallets();	
+	$mywallet->delwallets();	
 	
 	}
 

@@ -14,9 +14,9 @@ class Wallets1 extends Model{
 		 echo ($_GET["id"]);
 		 echo ($_GET["amount"]);
 }
-public function addwallets(){
-		$array1=Model::table("wallets")->delete(array("id" => 4))->send();
-		$this->viewJSON($array1);
+public function delwallets(){
+		$array1=Model::table("wallets")->delete(array("id" => $_GET["id"]))->send();
+		//$this->viewJSON($array1);
 }	
 }
 
