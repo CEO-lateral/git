@@ -29,6 +29,10 @@ public function viewWallets(){
 		$array1=Model::table("wallets")->get()->sort("id", "asc")->send();
 		$this->viewJSON($array1);
 }
+public function viewTransfers(){
+	$array1=Model::table("wallets_transfers")->get()->sort("id", "asc")->send();
+		$this->viewJSON($array1);
+}
 
 
 }

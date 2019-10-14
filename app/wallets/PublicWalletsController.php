@@ -29,6 +29,10 @@ public function addwallets(){
 		$mywallet3=new Wallets1();
 		$mywallet3->viewWallets();
 	}
+	public function viewTransfers(){
+		$mywallet4=new Wallets1();
+		$mywallet4->viewTransfers();
+	}
 							}
 
 ?>
