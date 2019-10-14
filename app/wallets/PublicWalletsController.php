@@ -26,6 +26,6 @@ $my_name=new Wallets1();
 		
 	}
 
-}
+}}
 
 ?>
