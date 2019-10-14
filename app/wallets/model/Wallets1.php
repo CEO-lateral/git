@@ -18,6 +18,11 @@ public function delwallets(){
 		$array1=Model::table("wallets")->delete(array("id" => $_GET["id"]))->send();
 		//$this->viewJSON($array1);
 }	
+public function addwallets(){
+		$array1=Model::table("wallets")->add(array("id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
+
+
+}
 }
 
 ?>

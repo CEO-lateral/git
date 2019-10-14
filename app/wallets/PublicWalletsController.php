@@ -16,9 +16,11 @@ $my_name=new Wallets1();
 	public function delwallets(){
 	$mywallet=new Wallets1();
 	$mywallet->delwallets();	
-	
 	}
-
-}
+public function addwallets(){
+	$mywallet1=new Wallets1();
+	$mywallet1->addwallets();
+	}
+							}
 
 ?>
