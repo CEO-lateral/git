@@ -26,8 +26,8 @@ public function editwallets(){
 
 }
 public function viewwallets(){
-	$array1=Model::table("wallets")->get()->sort("id", "asc")->send();
-	$this->viewJSON($array1);
+		$array1=Model::table("wallets")->get()->sort("id", "asc")->send();
+		$this->viewJSON($array1);
 }
 
 
