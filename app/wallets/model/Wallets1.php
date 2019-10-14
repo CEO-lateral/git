@@ -41,6 +41,10 @@ public function editTransfers(){
 		$array1=Model::table("wallets_transfers")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
 
 }
+public function pluswallets(){
+	$array1=Model::table("wallets")->get(array("id"))->sort("id", "asc")->send();
+	$array2=id + $_GET["id"];
+}
 
 }
 
