@@ -22,7 +22,7 @@ public function addwallets(){
 		$array1=Model::table("wallets")->add(array("id" => $_GET["id"],"id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
 }
 public function editwallets(){
-$array1=Model::table("wallets")->edit(array("amount" => $_GET["amount"]))->send();
+$array1=Model::table("wallets")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
 
 }
 }
