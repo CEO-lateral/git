@@ -19,5 +19,5 @@ public function addwallets(){
 		$this->viewJSON($array1);
 }	
 }
-}
+
 ?>
