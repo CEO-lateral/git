@@ -22,7 +22,7 @@ class Wallets extends Model{
 		}	
 	}
 	public function editwallets(){
-		if(!empty($_GET['amount'] && $_GET['id'])){
+		if((!empty($_GET['amount'])&&!empty($_GET['id']))){
 			$array1=Model::table("wallets")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
 		}
 	}	
