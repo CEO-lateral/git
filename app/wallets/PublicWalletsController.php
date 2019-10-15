@@ -1,16 +1,16 @@
 <?php
 class PublicWalletsController {
-	public function delwallets(){
+	public function delWallets(){
 		$mywallet=new Wallets();
-		$mywallet->delwallets();	
+		$mywallet->delWallets();	
 	}
-	public function addwallets(){
+	public function addWallets(){
 		$mywallet1=new Wallets();
-		$mywallet1->addwallets();
+		$mywallet1->addWallets();
 	}
-	public function editwallets(){
+	public function editWallets(){
 		$mywallet2=new Wallets();
-		$mywallet2->editwallets();
+		$mywallet2->editWallets();
 	}
 	public function viewWallets(){
 		$mywallet3=new Wallets();
@@ -28,17 +28,17 @@ class PublicWalletsController {
 		$mywallet6=new Wallets();
 		$mywallet6->editTransfers();
 	}
-	public function pluswallets(){
+	public function plusWallets(){
 		$mywallet7=new Wallets();
-		$mywallet7->pluswallets();
+		$mywallet7->plusWallets();
 	}
-	public function minuswallets(){
+	public function minusWallets(){
 		$mywallet8=new Wallets();
-		$mywallet8->minuswallets();
+		$mywallet8->minusWallets();
 	}
-	public function requestwallets(){
+	public function requestWallets(){
 		$mywallet9=new Wallets();
-		$mywallet9->requestwallets();
+		$mywallet9->requestWallets();
 	}
 }
 

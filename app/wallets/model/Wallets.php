@@ -6,21 +6,20 @@ class Wallets extends Model{
 			echo ($_GET["amount"]);
 		}
 	}
-	
-	public function delwallets(){
+	public function delWallets(){
 		if(!empty($_GET['id'])){
 			$array1=Model::table("wallets")->delete(array("id" => $_GET["id"]))->send();
 		}
 	}	
-	public function addwallets(){
+	public function addWallets(){
 		if(!empty($_GET['id_user']) && empty($_GET['amount']) && !empty($_GET['image'])){
 			$array1=Model::table("wallets")->add(array("id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
 		}	
-		if(empty($_GET['id_user']) || empty($_GET['amount'])){
+		if(empty($_GET['id_user']) || empty($_GET['image'])){
 			echo('Ошибка');
 		}
 	}
-	public function editwallets(){
+	public function editWallets(){
 		if((!empty($_GET['amount']) && !empty($_GET['id']))){
 			$array1=Model::table("wallets")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
 		}
@@ -43,7 +42,7 @@ class Wallets extends Model{
 			$array1=Model::table("wallets_transfers")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
 		}
 	}
-	public function pluswallets(){
+	public function plusWallets(){
 		if(!empty($_GET['amount'])){
 			$array1=Model::table("wallets")->get(array("id","amount"))->filter(array("id" => 1))->send();
 			$i=$array1[0]["amount"] + $_GET["amount"];
@@ -51,7 +50,7 @@ class Wallets extends Model{
 			$array2=Model::table("wallets")->edit(array("amount" => $i),array("id" => 1))->send();
 		}
 	}
-	public function minuswallets(){
+	public function minusWallets(){
 		if(!empty($_GET['amount'])){
 			$array1=Model::table("wallets")->get(array("id","amount"))->filter(array("id" => 1))->send();
 			$i=$array1[0]["amount"] - $_GET["amount"];
@@ -59,7 +58,7 @@ class Wallets extends Model{
 			$array2=Model::table("wallets")->edit(array("amount" => $i),array("id" => 1))->send();
 		}
 	}
-	public function requestwallets(){
+	public function requestWallets(){
 		$stmt = self::$db->prepare("SELECT * FROM  `wallets`,`wallets_transfers` WHERE wallets.id= :id");
 		$result_query = $stmt->execute(array(":id" => self::$params_url['id']));
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
