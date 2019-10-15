@@ -14,11 +14,11 @@ class Wallets extends Model{
 	}	
 	public function addwallets(){
 		if(!empty($_GET['id_user']) && empty($_GET['amount']) && !empty($_GET['image'])){
-			if(empty($_GET['id_user'] || empty($_GET['amount']){
-			echo('Ошибка');
-			}
 			$array1=Model::table("wallets")->add(array("id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
 		}	
+		if(empty($_GET['id_user'] || empty($_GET['amount']){
+			echo('Ошибка');
+		}
 	}
 	public function editwallets(){
 		if((!empty($_GET['amount']) && !empty($_GET['id']))){
