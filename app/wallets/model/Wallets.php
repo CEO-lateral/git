@@ -78,10 +78,14 @@ class Wallets extends Model{
 			}
 	}
 	public function requestWallets(){
-		$stmt = self::$db->prepare("SELECT * FROM  `wallets`,`wallets_transfers` WHERE wallets.id= :id");
-		$result_query = $stmt->execute(array(":id" => self::$params_url['id']));
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
-		$this->viewJSON($rows);				
-	}
+		if(!empty($_GET['id'])){
+			$stmt = self::$db->prepare("SELECT * FROM  `wallets`,`wallets_transfers` WHERE wallets.id= :id");
+			$result_query = $stmt->execute(array(":id" => self::$params_url['id']));
+			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+			$this->viewJSON($rows);			
+		}
+		else{
+			echo('Ошибка');
+		}				
 }		
 ?>
