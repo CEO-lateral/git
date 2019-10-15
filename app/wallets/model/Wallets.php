@@ -24,7 +24,7 @@ class Wallets extends Model{
 			}
 	}
 	public function editWallets(){
-		if((!empty($_GET['amount']) && !empty($_GET['id']))){
+		if((!empty($_GET['amount'])) && (!empty($_GET['id']))){
 			$array1=Model::table("wallets")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
 		}
 			if((empty($_GET['amount'])) || (empty($_GET['id']))){
@@ -78,7 +78,7 @@ class Wallets extends Model{
 			}
 	}
 	public function requestWallets(){
-		if(!empty($_GET['id'])){
+		//if(!empty($_GET['id'])){
 			$stmt = self::$db->prepare("SELECT * FROM  `wallets`,`wallets_transfers` WHERE wallets.id= :id");
 			$result_query = $stmt->execute(array(":id" => self::$params_url['id']));
 			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
