@@ -45,6 +45,10 @@ public function addwallets(){
 	$mywallet7=new Wallets1();
 	$mywallet7->pluswallets();
 	}
+	public function minuswallets(){
+	$mywallet8=new Wallets1();
+	$mywallet8->minuswallets();
+	}
 							}
 
 ?>
