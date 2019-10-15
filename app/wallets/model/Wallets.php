@@ -10,6 +10,10 @@ class Wallets extends Model{
 		if(!empty($_GET['id'])){
 			$array1=Model::table("wallets")->delete(array("id" => $_GET["id"]))->send();
 		}
+			if(empty($_GET['id'])){
+				echo('Ошибка');
+			}
+		
 	}	
 	public function addWallets(){
 		if(!empty($_GET['id_user']) && empty($_GET['amount']) && !empty($_GET['image'])){
@@ -23,7 +27,7 @@ class Wallets extends Model{
 		if((!empty($_GET['amount']) && !empty($_GET['id']))){
 			$array1=Model::table("wallets")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
 		}
-			if(empty($_GET['amount']) || empty($_GET['id'])){
+			if((empty($_GET['amount'])) || (empty($_GET['id']))){
 				echo('Ошибка');
 			}	
 	}	
