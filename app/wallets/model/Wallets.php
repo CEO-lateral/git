@@ -5,19 +5,27 @@ class Wallets extends Model{
     public function getName(){	
 		//$array1=Model::table("wallets")->get(array("id", "id_user","amount","image"))->send();
 		//$this->viewJSON($array1);
-		 echo ($_GET["id"]);
-		 echo ($_GET["amount"]);
+		if(!empty($_GET)){
+			echo ($_GET["id"]);
+			echo ($_GET["amount"]);
+		}
 	}
 	public function delwallets(){
-		$array1=Model::table("wallets")->delete(array("id" => $_GET["id"]))->send();
-		//$this->viewJSON($array1);
+		if(!empty($_GET)){
+			$array1=Model::table("wallets")->delete(array("id" => $_GET["id"]))->send();
+			//$this->viewJSON($array1);
+		}
 	}	
 	public function addwallets(){
-		$array1=Model::table("wallets")->add(array("id" => $_GET["id"],"id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
+		if(!empty($_GET)){
+			$array1=Model::table("wallets")->add(array("id" => $_GET["id"],"id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
+		}	
 	}
 	public function editwallets(){
-		$array1=Model::table("wallets")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
-	}
+		if(!empty($_GET['amount'] && $_GET['id'])){
+			$array1=Model::table("wallets")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
+		}
+	}	
 	public function viewWallets(){
 		$array1=Model::table("wallets")->get()->sort("id", "asc")->send();
 		$this->viewJSON($array1);
