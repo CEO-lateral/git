@@ -1,10 +1,6 @@
 <?php
-
 class Wallets extends Model{
-	
     public function getName(){	
-		//$array1=Model::table("wallets")->get(array("id", "id_user","amount","image"))->send();
-		//$this->viewJSON($array1);
 		if(!empty($_GET)){
 			echo ($_GET["id"]);
 			echo ($_GET["amount"]);
@@ -13,16 +9,15 @@ class Wallets extends Model{
 	public function delwallets(){
 		if(!empty($_GET['id'])){
 			$array1=Model::table("wallets")->delete(array("id" => $_GET["id"]))->send();
-			//$this->viewJSON($array1);
 		}
 	}	
 	public function addwallets(){
-		if((!empty($_GET['id'])&&!empty($_GET['id_user'])&&!empty($_GET['amount'])&&!empty($_GET['image']))){
+		if((!empty($_GET['id']) && !empty($_GET['id_user']) && !empty($_GET['amount']) && !empty($_GET['image']))){
 			$array1=Model::table("wallets")->add(array("id" => $_GET["id"],"id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
 		}	
 	}
 	public function editwallets(){
-		if((!empty($_GET['amount'])&&!empty($_GET['id']))){
+		if((!empty($_GET['amount']) && !empty($_GET['id']))){
 			$array1=Model::table("wallets")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
 		}
 	}	
@@ -40,7 +35,7 @@ class Wallets extends Model{
 		}
 	}
 	public function editTransfers(){
-		if((!empty($_GET['amount'])&&!empty($_GET['id']))){
+		if((!empty($_GET['amount']) && !empty($_GET['id']))){
 			$array1=Model::table("wallets_transfers")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
 		}
 	}
@@ -66,6 +61,5 @@ class Wallets extends Model{
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 		$this->viewJSON($rows);				
 	}
-
 }		
 ?>
