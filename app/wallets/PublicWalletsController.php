@@ -1,25 +1,21 @@
 <?php
-
 /*
  * Every class derriving from Model has access to $this->db
  * $this->db is a PDO object
  * Has a config in /core/config/database.php
  */
-
 class PublicWalletsController {
-
-	
    /* public function getExample(){
 $my_name=new Wallets1();
       $my_name->getName();
 	}*/
 	public function delwallets(){
-	$mywallet=new Wallets1();
-	$mywallet->delwallets();	
+		$mywallet=new Wallets1();
+		$mywallet->delwallets();	
 	}
-public function addwallets(){
-	$mywallet1=new Wallets1();
-	$mywallet1->addwallets();
+	public function addwallets(){
+		$mywallet1=new Wallets1();
+		$mywallet1->addwallets();
 	}
 	public function editwallets(){
 		$mywallet2=new Wallets1();
@@ -42,12 +38,16 @@ public function addwallets(){
 		$mywallet6->editTransfers();
 	}
 	public function pluswallets(){
-	$mywallet7=new Wallets1();
-	$mywallet7->pluswallets();
+		$mywallet7=new Wallets1();
+		$mywallet7->pluswallets();
 	}
 	public function minuswallets(){
-	$mywallet8=new Wallets1();
-	$mywallet8->minuswallets();
+		$mywallet8=new Wallets1();
+		$mywallet8->minuswallets();
+	}
+	public function requestwallets(){
+		$mywallet9=new Wallets1();
+		$mywallet9->requestwallets();
 	}
 							}
 

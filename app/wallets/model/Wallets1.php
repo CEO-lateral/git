@@ -55,6 +55,13 @@ public function minuswallets(){
     $array2=Model::table("wallets")->edit(array("amount" => $i),array("id" => 1))->send();
 	
 }
+public function requestwallets(){
+$stmt = self::$db->prepare("SELECT * FROM  `wallets` WHERE id= :id AND image = :image");
+$result_query = $stmt->execute(array(":id" => self::$params_url['id'], ":image" => self::$params_url['image']));
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+$this->viewJSON($rows);	
+	
+}
 
 }
 
