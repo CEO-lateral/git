@@ -11,13 +11,13 @@ class Wallets extends Model{
 		}
 	}
 	public function delwallets(){
-		if(!empty($_GET)){
+		if(!empty($_GET['id'])){
 			$array1=Model::table("wallets")->delete(array("id" => $_GET["id"]))->send();
 			//$this->viewJSON($array1);
 		}
 	}	
 	public function addwallets(){
-		if(!empty($_GET)){
+		if((!empty($_GET['id'])&&!empty($_GET['id_user'])&&!empty($_GET['amount'])&&!empty($_GET['image']))){
 			$array1=Model::table("wallets")->add(array("id" => $_GET["id"],"id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
 		}	
 	}
@@ -35,28 +35,38 @@ class Wallets extends Model{
 		$this->viewJSON($array1);
 	}
 	public function delTransfers(){
-		$array1=Model::table("wallets_transfers")->delete(array("id" => $_GET["id"]))->send();
+		if(!empty($_GET['id'])){
+			$array1=Model::table("wallets_transfers")->delete(array("id" => $_GET["id"]))->send();
+		}
 	}
 	public function editTransfers(){
-		$array1=Model::table("wallets_transfers")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
+		if((!empty($_GET['amount'])&&!empty($_GET['id']))){
+			$array1=Model::table("wallets_transfers")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
+		}
 	}
 	public function pluswallets(){
-		$array1=Model::table("wallets")->get(array("id","amount"))->filter(array("id" => 1))->send();
-		$i=$array1[0]["amount"] + $_GET["amount"];
-		echo($i);
-		$array2=Model::table("wallets")->edit(array("amount" => $i),array("id" => 1))->send();
+		if(!empty($_GET['amount'])){
+			$array1=Model::table("wallets")->get(array("id","amount"))->filter(array("id" => 1))->send();
+			$i=$array1[0]["amount"] + $_GET["amount"];
+			echo($i);
+			$array2=Model::table("wallets")->edit(array("amount" => $i),array("id" => 1))->send();
+		}
 	}
 	public function minuswallets(){
-		$array1=Model::table("wallets")->get(array("id","amount"))->filter(array("id" => 1))->send();
-		$i=$array1[0]["amount"] - $_GET["amount"];
-		echo($i);
-		$array2=Model::table("wallets")->edit(array("amount" => $i),array("id" => 1))->send();
+		if(!empty($_GET['amount'])){
+			$array1=Model::table("wallets")->get(array("id","amount"))->filter(array("id" => 1))->send();
+			$i=$array1[0]["amount"] - $_GET["amount"];
+			echo($i);
+			$array2=Model::table("wallets")->edit(array("amount" => $i),array("id" => 1))->send();
+		}
 	}
 	public function requestwallets(){
-		$stmt = self::$db->prepare("SELECT * FROM  `wallets`,`wallets_transfers` WHERE wallets.id= :id");
-		$result_query = $stmt->execute(array(":id" => self::$params_url['id']));
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
-		$this->viewJSON($rows);		
+		if(!empty($_GET['amount'])){
+			$stmt = self::$db->prepare("SELECT * FROM  `wallets`,`wallets_transfers` WHERE wallets.id= :id");
+			$result_query = $stmt->execute(array(":id" => self::$params_url['id']));
+			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+			$this->viewJSON($rows);		
+		}
 	}
 
 }		
