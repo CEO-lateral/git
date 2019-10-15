@@ -40,6 +40,6 @@ class PublicWalletsController {
 		$mywallet9=new Wallets1();
 		$mywallet9->requestwallets();
 	}
-							}
+}
 
 ?>
