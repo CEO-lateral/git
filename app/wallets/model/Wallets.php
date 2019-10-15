@@ -6,13 +6,14 @@ class Wallets extends Model{
 			echo ($_GET["amount"]);
 		}
 	}
+	
 	public function delwallets(){
 		if(!empty($_GET['id'])){
 			$array1=Model::table("wallets")->delete(array("id" => $_GET["id"]))->send();
 		}
 	}	
 	public function addwallets(){
-		if((!empty($_GET['id']) && !empty($_GET['id_user']) && !empty($_GET['amount']) && !empty($_GET['image']))){
+		if((!empty($_GET['id']) && !empty($_GET['id_user']) && empty($_GET['amount']) && !empty($_GET['image']))){
 			$array1=Model::table("wallets")->add(array("id" => $_GET["id"],"id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
 		}	
 	}
