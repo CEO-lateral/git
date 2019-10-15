@@ -61,7 +61,6 @@ class Wallets extends Model{
 		}
 	}
 	public function requestwallets(){
-		if(!empty($_GET['amount'])){
 			$stmt = self::$db->prepare("SELECT * FROM  `wallets`,`wallets_transfers` WHERE wallets.id= :id");
 			$result_query = $stmt->execute(array(":id" => self::$params_url['id']));
 			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
