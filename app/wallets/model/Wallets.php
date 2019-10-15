@@ -51,7 +51,7 @@ class Wallets extends Model{
 		if((!empty($_GET['amount']) && !empty($_GET['id']))){
 			$array1=Model::table("wallets_transfers")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
 		}
-			if(empty($_GET['amount']) || empty($_GET['id'])){
+			if((empty($_GET['amount'])) || (empty($_GET['id']))){
 				echo('Ошибка');
 			}
 	}
