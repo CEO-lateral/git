@@ -19,6 +19,7 @@ class Wallets extends Model{
 		if(!empty($_GET['id_user']) && empty($_GET['amount']) && !empty($_GET['image'])){
 			//$array1=Model::table("wallets")->add(array("id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
 			$array1=Model::table("wallets")->get(array("id"))->sort("id", "asc")->send();
+			$this->viewJSON($array1);
 		}	
 			if((empty($_GET['id_user'])) || (empty($_GET['image']))){
 				echo('Ошибка');
