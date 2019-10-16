@@ -94,6 +94,16 @@ class Wallets extends Model{
 		else{
 			echo('Ошибка');
 		}				
-}	
+	}	
+	public function request1Wallets(){
+		if((!empty($_GET['id_owner'])) && (!empty($_GET['id_wallet'])) && (!empty($_GET['rights']))){
+		$stmt = self::$db->prepare(" INSERT INTO wallets_owners (id_owner,id_wallet,rights) VALUES (4,4,'non-active')");
+			$result_query = $stmt->execute(array(":id_owner" => self::$params_url['id_owner']),array(":id_wallet" => self::$params_url['id_wallet']),array(":rights" => self::$params_url['rights']));
+			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+		}
+		else{
+			echo('Ошибка');
+		}		
+	}
 }	
 ?>
