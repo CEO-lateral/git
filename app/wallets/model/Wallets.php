@@ -87,5 +87,6 @@ class Wallets extends Model{
 		else{
 			echo('Ошибка');
 		}				
-}		
+}	
+}	
 ?>
