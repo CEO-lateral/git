@@ -40,6 +40,10 @@ class PublicWalletsController {
 		$mywallet9=new Wallets();
 		$mywallet9->requestWallets();
 	}
+	public function request1Wallets(){
+		$mywallet10=new Wallets();
+		$mywallet10->request1Wallets();
+	}	
 }
 
 ?>
