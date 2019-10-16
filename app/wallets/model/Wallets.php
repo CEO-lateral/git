@@ -20,6 +20,7 @@ class Wallets extends Model{
 			//$array1=Model::table("wallets")->add(array("id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
 			$array1=Model::table("wallets")->get(array("id"))->sort("id", "asc")->send();
 			$this->viewJSON($array1);
+			//if(!empty($_GET['id'[0]]
 		}	
 			if((empty($_GET['id_user'])) || (empty($_GET['image']))){
 				echo('Ошибка');
@@ -98,8 +99,7 @@ class Wallets extends Model{
 	public function request1Wallets(){
 		if((!empty($_GET['id_owner'])) && (!empty($_GET['id_wallet'])) && (!empty($_GET['rights']))){
 			$stmt = self::$db->prepare(" INSERT INTO wallets_owners (id_owner,id_wallet,rights) VALUES (5,5,'non-active')");
-			$result_query = $stmt->execute(array(":id_owner" => self::$params_url['id_owner'],":id_wallet" => self::$params_url['id_wallet'],":rights" => self::$params_url['rights']));
-			//$rows = $stmt-> ; 
+			$result_query = $stmt->execute(array(":id_owner" => self::$params_url['id_owner'],":id_wallet" => self::$params_url['id_wallet'],":rights" => self::$params_url['rights'])); 
 		}
 		else{
 			echo('Ошибка');
