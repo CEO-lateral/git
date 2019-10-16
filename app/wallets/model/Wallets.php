@@ -62,7 +62,7 @@ class Wallets extends Model{
 			$array1=Model::table("wallets")->get(array("id","amount"))->send();
 			$i=$array1[0]["amount"] + $_GET["amount"];
 			echo($i);
-			$array2=Model::table("wallets")->edit(array("amount" => $i))->send();
+			$array2=Model::table("wallets")->edit(array("amount" => $i),array("id" => $_GET['id']))->send();
 		}
 			else{
 				echo('Ошибка');
