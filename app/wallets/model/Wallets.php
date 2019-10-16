@@ -69,7 +69,7 @@ class Wallets extends Model{
 			}
 	}
 	public function minusWallets(){
-		if((!empty($_GET['amount'])) && (!empty($_GET['id']))){
+		if((!empty($_GET['amount'])) && (!empty($_GET['id'])) && ($_GET['amount']>0)){
 			$array1=Model::table("wallets")->get(array("id","amount"))->filter(array("id" => $_GET['id']))->send();
 			$i=$array1[0]["amount"] - $_GET["amount"];
 			if($i>=0){
