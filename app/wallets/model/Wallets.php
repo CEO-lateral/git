@@ -59,9 +59,9 @@ class Wallets extends Model{
 	}
 	public function plusWallets(){
 		if((!empty($_GET['amount'])) && (!empty($_GET['id']))){
-			$array1=Model::table("wallets")->get(array("id","amount"))->send();
-			echo('$array1');
+			$array1=Model::table("wallets")->get(array("id","amount"))->filter(array("id" => $_GET['id']))->send();
 			$i=$array1[$_GET['id']]["amount"] + $_GET["amount"];
+			echo($i);
 			$array2=Model::table("wallets")->edit(array("amount" => $i),array("id" => $_GET['id']))->send();
 		}
 			else{
