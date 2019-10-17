@@ -55,14 +55,14 @@ class Wallets extends Model{
 			}
 	}
 	public function editTransfers(){
-		$i=(array("amount"=>$_GET["amount"]),array("id"=>$_GET["id"]),array("status"=>$_GET["status"]),array("comments"=>$_GET["comments"]),array("timestamp"=>$_GET["timestamp"]));
+		$i=array("amount" => $_GET["amount"]),array("id" => $_GET["id"]),array("status" => $_GET["status"]),array("comments" => $_GET["comments"]),array("timestamp" => $_GET["timestamp"]);
 		if((!empty($_GET['id']))){
 				if(!empty($_GET['amount'])){
 						if(!empty($_GET['status'])){
 							if(!empty($_GET['comments'])){
 								if(!empty($_GET['timestamp'])){
 									$array1=Model::table("wallets_transfers")->edit($i)->send();
-				}		}	}	}
+				}	}		}	}	
 		}
 			else{
 				echo('Ошибка');
