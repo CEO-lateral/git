@@ -56,17 +56,16 @@ class Wallets extends Model{
 	}
 	public function editTransfers(){
 		if((!empty($_GET['id'])) && ((!empty($_GET['amount'])) || (!empty($_GET['status'])) || (!empty($_GET['comments'])) || (!empty($_GET['timestamp'])))){
-			//$array1=Model::table("wallets_transfers")->edit(array("amount" => $_GET["amount"]),("id" => $_GET["id"]),array("status" => $_GET["status"]),array("comments" => $_GET["comments"]),array("timestamp" => $_GET["timestamp"]))->send();
-				if((!empty($_GET['id'])) && (!empty($_GET['amount']))){
+				if(!empty($_GET['amount'])){
 					$array1=Model::table("wallets_transfers")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
 				}
-						if((!empty($_GET['id'])) && (!empty($_GET['status']))){
+						if(!empty($_GET['status'])){
 							$array1=Model::table("wallets_transfers")->edit(array("status" => $_GET["status"]),array("id" => $_GET["id"]))->send();
 						}
-							if((!empty($_GET['id'])) && (!empty($_GET['comments']))){
+							if(!empty($_GET['comments'])){
 								$array1=Model::table("wallets_transfers")->edit(array("comments" => $_GET["comments"]),array("id" => $_GET["id"]))->send();				
 							}
-								if((!empty($_GET['id'])) && (!empty($_GET['timestamp']))){
+								if(!empty($_GET['timestamp'])){
 									$array1=Model::table("wallets_transfers")->edit(array("timestamp" => $_GET["timestamp"]),array("id" => $_GET["id"]))->send();
 								}
 		}
