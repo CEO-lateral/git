@@ -21,6 +21,9 @@ class Wallets extends Model{
 				if(empty($array1[0]["id"])){
 					$array1=Model::table("wallets")->add(array("id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send();
 				}
+					else{
+						echo('Ошибка');
+					}
 			
 		}	
 					if((empty($_GET['id_user'])) || (empty($_GET['image']))){
