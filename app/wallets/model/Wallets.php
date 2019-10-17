@@ -21,7 +21,7 @@ class Wallets extends Model{
 			$array1=Model::table("wallets")->get(array("id"))->filter(array("id" =>9))->send();
 			$this->viewJSON($array1);
 			var_dump($array[0]["id"]);
-				if(empty($array[0]["id"])){
+				if(empty($array1[0]["id"])){
 					echo("Loh");
 				}
 			
