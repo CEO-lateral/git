@@ -20,9 +20,10 @@ class Wallets extends Model{
 			//$array1=Model::table("wallets")->add(array("id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
 			$array1=Model::table("wallets")->get(array("id"))->sort("id", "asc")->send();
 			$this->viewJSON($array1);
-			if(!empty($_GET['id'[0]])){
-				echo('Loh');
+			if(!empty($array[0]["id"])){
+				echo("Loh");
 			}
+			
 		}	
 			if((empty($_GET['id_user'])) || (empty($_GET['image']))){
 				echo('Ошибка');
