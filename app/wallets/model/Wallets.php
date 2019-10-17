@@ -20,14 +20,15 @@ class Wallets extends Model{
 			//$array1=Model::table("wallets")->add(array("id_user" => $_GET["id_user"], "amount" => $_GET["amount"],"image" => $_GET["image"]))->send(); 
 			$array1=Model::table("wallets")->get(array("id"))->filter(array("id" =>9))->send();
 			$this->viewJSON($array1);
-			if(empty($array[0]["id"])){
-				echo("Loh");
-			}
+			var_dump($array[0]["id"]);
+				if(empty($array[0]["id"])){
+					echo("Loh");
+				}
 			
 		}	
-			if((empty($_GET['id_user'])) || (empty($_GET['image']))){
-				echo('Ошибка');
-			}
+					if((empty($_GET['id_user'])) || (empty($_GET['image']))){
+						echo('Ошибка');
+					}
 	}
 	public function editWallets(){
 		if((!empty($_GET['amount'])) && (!empty($_GET['id']))){
