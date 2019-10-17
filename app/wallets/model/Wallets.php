@@ -55,7 +55,7 @@ class Wallets extends Model{
 			}
 	}
 	public function editTransfers(){
-		if((!empty($_GET['id'])) && ((!empty($_GET['amount'])) || (!empty($_GET['status'])) || (!empty($_GET['comments'])) || (!empty($_GET['timestamp'])))){
+		if((!empty($_GET['id']))){
 				if(!empty($_GET['amount'])){
 					$array1=Model::table("wallets_transfers")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]))->send();
 				}
