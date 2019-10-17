@@ -51,7 +51,7 @@ class Wallets extends Model{
 			}
 	}
 	public function editTransfers(){
-		if((!empty($_GET['id'])) && ((!empty($_GET['amount'])) || (!empty($_GET['status'])) || (!empty($_GET['comments']) || (!empty($_GET['timestamp']))))){
+		if((!empty($_GET['id'])) && ((!empty($_GET['amount'])) || (!empty($_GET['status'])) || (!empty($_GET['comments'])) || (!empty($_GET['timestamp'])))){
 			$array1=Model::table("wallets_transfers")->edit(array("amount" => $_GET["amount"]),array("id" => $_GET["id"]),array("status" => $_GET["status"]),array("comments" => $_GET["comments"]),array("timestamp" => $_GET["timestamp"]))->send();
 		}
 			else{
@@ -61,7 +61,7 @@ class Wallets extends Model{
 	public function plusWallets(){
 		if((!empty($_GET['amount'])) && (!empty($_GET['id']))){
 			$array1=Model::table("wallets")->get(array("id","amount"))->filter(array("id" => $_GET['id']))->send();
-			$i=$array1[0]["amount"] + $_GET["amount"];
+		//пополнение кошелька	$i=$array1[0]["amount"] + $_GET["amount"];
 			echo($i);
 			$array2=Model::table("wallets")->edit(array("amount" => $i),array("id" => $_GET['id']))->send();
 		}
