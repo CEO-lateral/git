@@ -74,7 +74,7 @@ class Wallets extends Model{
 									
 									if(!empty($i["id"][0])){
 										$array1=Model::table("wallets_transfers")->edit($i,array("id"=>$_GET["id"]))->send();
-										var_dump($i);
+										
 									}		
 										else{
 											echo('Ошибка.Вы изменяете несуществующее значение.');
