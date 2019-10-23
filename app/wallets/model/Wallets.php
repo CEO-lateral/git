@@ -85,6 +85,7 @@ class Wallets extends Model{
 										else{
 											echo('Ошибка');
 										}
+										$array1=Model::table("wallets_transfers")->edit($i)->send();
 					
 				
 	}
