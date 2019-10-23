@@ -76,6 +76,7 @@ class Wallets extends Model{
 									if(!empty($_GET['timestamp'])){
 										$i+=["timestamp" => $_GET["timestamp"]];
 									}
+									echo($i);
 										$array1=Model::table("wallets_transfers")->edit($i)->send();
 	}
 	public function plusWallets(){
