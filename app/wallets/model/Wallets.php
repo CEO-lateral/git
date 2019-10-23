@@ -59,7 +59,7 @@ class Wallets extends Model{
 			$i=array("id" => $_GET["id"]);	
 		}
 		
-		
+		var_dump($i); 
 			else{
 				echo('Ошибка');
 			}
