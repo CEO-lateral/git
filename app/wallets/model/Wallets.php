@@ -70,24 +70,13 @@ class Wallets extends Model{
 						if(!empty($_GET['status'])){
 							$i+=["status" => $_GET["status"]];
 						}
-							else{
-								echo('Ошибка');
-							}
 								if(!empty($_GET['comments'])){
 									$i+=["comments" => $_GET["comments"]];
 								}
-									else{
-										echo('Ошибка');
-									}
 									if(!empty($_GET['timestamp'])){
 										$i+=["timestamp" => $_GET["timestamp"]];
 									}
-										else{
-											echo('Ошибка');
-										}
 										$array1=Model::table("wallets_transfers")->edit($i)->send();
-					
-				
 	}
 	public function plusWallets(){
 		if((!empty($_GET['amount'])) && (!empty($_GET['id']))){
