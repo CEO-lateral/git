@@ -71,12 +71,12 @@ class Wallets extends Model{
 									if(!empty($_GET['timestamp'])){
 										$i["timestamp"] = $_GET["timestamp"];
 									}
-									if(!empty($i[0]["id"])){
+									if(!empty($i[$_GET['id']]["id"])){
 										$array1=Model::table("wallets_transfers")->edit($i,array("id"=>$_GET["id"]))->send();
 									}		
 										else{
 											echo('Ошибка.Вы изменяете несуществующее значение.');
-											var_dump($i);
+											//var_dump($i);
 										}
 									
 										
