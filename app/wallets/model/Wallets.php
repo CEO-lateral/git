@@ -63,16 +63,17 @@ class Wallets extends Model{
 				echo('Ошибка');
 			}
 				if(!empty($_GET['amount'])){
-					$i+=["amount" => $_GET["amount"]];
+					$i["amount"] = $_GET["amount"];
 				}
 					else{
 						echo('Ошибка');
 					}
 						if(!empty($_GET['status'])){
-							$i+=["status" => $_GET["status"]];
+							$i["status"] = $_GET["status"];
+							
 						}
 								if(!empty($_GET['comments'])){
-									$i+=["comments" => $_GET["comments"]];
+									$i["comments"] = $_GET["comments"];
 								}
 									if(!empty($_GET['timestamp'])){
 										$i+=["timestamp" => $_GET["timestamp"]];
