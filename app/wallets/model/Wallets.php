@@ -55,35 +55,31 @@ class Wallets extends Model{
 			}
 	}
 	public function editTransfers(){
-		$a=array('a'=>1,'b'=>2,'c'=>3,'d'=>'4');
 		if((!empty($_GET['id']))){
-			foreach ($i as $key => $value){
-			$i=array("id" => $_GET["id"]);}	
+			$i=array("id" => $_GET["id"]);	
 		}
+		var_dump($i); 
+		
 			else{
 				echo('Ошибка');
 			}
 				if(!empty($_GET['amount'])){
-					foreach ($i as $key => $value){
-					$i["amount"] = $_GET["amount"];}
+					$i["amount"] = $_GET["amount"];
 				}
 					else{
 						echo('Ошибка');
 					}
 						if(!empty($_GET['status'])){
-							foreach ($i as $key => $value){
-							$i["status"] = $_GET["status"];}
+							$i["status"] = $_GET["status"];
 							
 						}
 								if(!empty($_GET['comments'])){
-									foreach ($i as $key => $value){
-									$i["comments"] = $_GET["comments"];}
+									$i["comments"] = $_GET["comments"];
 								}
 									if(!empty($_GET['timestamp'])){
-										foreach ($i as $key => $value){
-										$i["timestamp"] = $_GET["timestamp"];}
+										$i["timestamp"] = $_GET["timestamp"];
 									}
-									var_dump($i); 
+									
 										$array1=Model::table("wallets_transfers")->edit($i)->send();
 	}
 	public function plusWallets(){
