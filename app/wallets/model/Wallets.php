@@ -76,7 +76,7 @@ class Wallets extends Model{
 									$i["comments"] = $_GET["comments"];
 								}
 									if(!empty($_GET['timestamp'])){
-										$i+=["timestamp" => $_GET["timestamp"]];
+										$i["timestamp"] = $_GET["timestamp"];
 									}
 									var_dump($i); 
 										$array1=Model::table("wallets_transfers")->edit($i)->send();
