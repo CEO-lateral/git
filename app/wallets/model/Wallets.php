@@ -71,7 +71,7 @@ class Wallets extends Model{
 									if(!empty($_GET['timestamp'])){
 										$i["timestamp"] = $_GET["timestamp"];
 									}
-									if(!empty($i[$_GET['id']]["id"])){
+									if(!empty($i["id"])){
 										$array1=Model::table("wallets_transfers")->edit($i,array("id"=>$_GET["id"]))->send();
 									}		
 										else{
