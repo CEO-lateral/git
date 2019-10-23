@@ -62,25 +62,25 @@ class Wallets extends Model{
 				echo('Ошибка');
 			}
 				if(!empty($_GET['amount'])){
-					array_push($i, "amount" => $_GET["amount"]);
+					$i+=["amount" => $_GET["amount"]];
 				}
 					else{
 						echo('Ошибка');
 					}
 						if(!empty($_GET['status'])){
-							array_push($i, "status" => $_GET["status"]);
+							$i+=["status" => $_GET["status"]];
 						}
 							else{
 								echo('Ошибка');
 							}
 								if(!empty($_GET['comments'])){
-									array_push($i, "comments" => $_GET["comments"]);
+									$i+=["comments" => $_GET["comments"]];
 								}
 									else{
 										echo('Ошибка');
 									}
 									if(!empty($_GET['timestamp'])){
-										array_push($i, "timestamp" => $_GET["timestamp"]);
+										$i+=["timestamp" => $_GET["timestamp"]];
 									}
 										else{
 											echo('Ошибка');
