@@ -55,23 +55,37 @@ class Wallets extends Model{
 			}
 	}
 	public function editTransfers(){
-		$i=
-		array("amount" => $_GET["amount"],
-		"id" => $_GET["id"],
-		"status" => $_GET["status"],
-		"comments" => $_GET["comments"],
-		"timestamp" => $_GET["timestamp"]);
 		if((!empty($_GET['id']))){
-				if(!empty($_GET['amount'])){
-						if(!empty($_GET['status'])){
-							if(!empty($_GET['comments'])){
-								if(!empty($_GET['timestamp'])){
-									$array1=Model::table("wallets_transfers")->edit($i)->send();
-				}	}		}	}	
+			$i=array("id" => $_GET["id"]);	
 		}
 			else{
 				echo('Ошибка');
 			}
+				if(!empty($_GET['amount'])){
+					array_push($i, "amount" => $_GET["amount"]);
+				}
+					else{
+						echo('Ошибка');
+					}
+						if(!empty($_GET['status'])){
+							array_push($i, "status" => $_GET["status"]);
+						}
+							else{
+								echo('Ошибка');
+							}
+								if(!empty($_GET['comments'])){
+									array_push($i, "comments" => $_GET["comments"]);
+								}
+									else{
+										echo('Ошибка');
+									}
+									if(!empty($_GET['timestamp'])){
+										array_push($i, "timestamp" => $_GET["timestamp"]);
+									}
+										else{
+											echo('Ошибка');
+										}
+					
 				
 	}
 	public function plusWallets(){
