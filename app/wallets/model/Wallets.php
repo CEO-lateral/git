@@ -58,11 +58,12 @@ class Wallets extends Model{
 		if((!empty($_GET['id']))){
 			$i=array("id" => $_GET["id"]);	
 		}
-		var_dump($i); 
+		
 		
 			else{
 				echo('Ошибка');
 			}
+			var_dump($i); 
 				if(!empty($_GET['amount'])){
 					$i["amount"] = $_GET["amount"];
 				}
