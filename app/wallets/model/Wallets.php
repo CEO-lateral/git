@@ -57,16 +57,9 @@ class Wallets extends Model{
 	public function editTransfers(){
 		if((!empty($_GET['id']))){
 			$i=array("id" => $_GET["id"]);	
-		} 
-			else{
-				echo('Ошибка');
-			} 
+		
 				if(!empty($_GET['amount'])){
-					$i["amount"] = $_GET["amount"];
-				}
-					else{
-						echo('Ошибка');
-					}
+					$i["amount"] = $_GET["amount"];					
 						if(!empty($_GET['status'])){
 							$i["status"] = $_GET["status"];
 							
@@ -79,6 +72,13 @@ class Wallets extends Model{
 									}
 									
 										$array1=Model::table("wallets_transfers")->edit($i,array("id"=>$_GET["id"]))->send();
+		}else{
+			echo('Некорректный ввод.Введите amount:');
+		}
+		}else{
+			echo('Некорректный ввод.Введите id:');
+		}
+			
 	}
 	public function plusWallets(){
 		if((!empty($_GET['amount'])) && (!empty($_GET['id']))){
