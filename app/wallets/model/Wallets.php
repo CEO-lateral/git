@@ -55,7 +55,7 @@ class Wallets extends Model{
 			}
 	}
 	public function editTransfers(){
-		$a=array['a'=>1,'b'=>2,'c'=>3,'d'=>'4'];
+		$a=array('a'=>1,'b'=>2,'c'=>3,'d'=>'4');
 		if((!empty($_GET['id']))){
 			$i=array("id" => $_GET["id"]);	
 		}
