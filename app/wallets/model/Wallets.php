@@ -59,7 +59,8 @@ class Wallets extends Model{
 			$i=array("id" => $_GET["id"]);	
 		
 				if(!empty($_GET['amount'])){
-					$i["amount"] = $_GET["amount"];					
+					$i["amount"] = $_GET["amount"];
+				}					
 						if(!empty($_GET['status'])){
 							$i["status"] = $_GET["status"];
 							
@@ -78,9 +79,7 @@ class Wallets extends Model{
 					}
 									
 										
-		}else{
-			echo('Некорректный ввод.Введите amount:');
-		}
+		
 		}else{
 			echo('Некорректный ввод.Введите id:');
 		}
