@@ -15,6 +15,7 @@ $(document).ready(function(){
                               html += '<tbody><tr><td>' + wallets.result[i].id + '</td><td>' + wallets.result[i].id_user + '</td><td>' + wallets.result[i].amount + '</td><td>' + wallets.result[i].image + '</td></tr></tbody>';
                         }
                         $('.upd').append(html);
+						console.log("a");
           } 
     
 $('.sortA').click(function(){
