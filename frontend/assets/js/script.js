@@ -36,7 +36,7 @@ $(document).ready(function(){
 			}
 		});
 	}
-		display();
+		view();
 	$('#sortASC').click(function(){
 		$.ajax({
 		url: 'https://k.qzo.su/api/wallets/sortASC', 
