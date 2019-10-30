@@ -22,7 +22,7 @@ $(document).ready(function(){
                               html += '<tbody><tr><td>' + data.result[i].id + '</td><td>' + data.result[i].id_user + '</td><td>' + data.result[i].amount + '</td><td>' + data.result[i].image + '</td></tr></tbody>';
                         }
                         $('.upd').append(html);
-						console.log("data");
+						
           } 
 		});
 		$('#showInput').click(function(){
@@ -38,12 +38,12 @@ $('#sortASC').click(function(){
         type: 'GET',
         datatype: 'json',
         data: {},
-        success:    function(data){
+        success:    
                     $('.table').empty();
                     $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
                     table(data);
                     console.log("Sort by ASC success");
-                    }
+                    
         });
 });
    
