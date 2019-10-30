@@ -8,8 +8,8 @@ $(document).ready(function(){
        $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
         console.log("clear");
     });
-	function table (wallets) {
-                        var wallets = jQuery.parseJSON(JSON.stringify(wallets));
+	function table (data) {
+                        var data = jQuery.parseJSON(JSON.stringify(data));
                         var html = '';
                         for (var i = 0; i < wallets.result.length; i++) {
                               html += '<tbody><tr><td>' + wallets.result[i].id + '</td><td>' + wallets.result[i].id_user + '</td><td>' + wallets.result[i].amount + '</td><td>' + wallets.result[i].image + '</td></tr></tbody>';
