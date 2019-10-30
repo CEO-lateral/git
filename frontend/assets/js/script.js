@@ -32,9 +32,9 @@ $('.table').append('<thead><tr><th scope="col">13</th><th scope="col">13</th><th
 		
 	 
     
-$('.sortA').click(function(){
+$('#sortASC').click(function(){
     $.ajax({
-        url: 'https://k.qzo.su/api/wallets/viewWallets', 
+        url: 'https://k.qzo.su/api/wallets/sortASC', 
         type: 'GET',
         datatype: 'json',
         data: {},
@@ -48,9 +48,9 @@ $('.sortA').click(function(){
         });
 });
    
-$('.sortD').click(function(){
+$('#sortDESC').click(function(){
     $.ajax({
-        url: 'https://k.qzo.su/api/users/viewWallets', 
+        url: 'https://k.qzo.su/api/wallets/sortDESC', 
         type: 'GET',
         datatype: 'json',
         data: {},
