@@ -38,12 +38,12 @@ $('#sortASC').click(function(){
         type: 'GET',
         datatype: 'json',
         data: {},
-        success:    
+        success:    function(data){
                     $('.table').empty();
                     $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
                     table(data);
                     console.log("Sort by ASC success");
-                    
+                    }
         });
 });
    
