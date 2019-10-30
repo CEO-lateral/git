@@ -25,7 +25,7 @@ $(document).ready(function(){
 						console.log("data");
           } 
 		});
-		$('#add').click(function(){
+		$('.table').click(function(){
 			console.log("data222");
 		$.ajax({
 		url: 'https://k.qzo.su/api/wallets/addWallets', 
