@@ -12,27 +12,14 @@ $(document).ready(function(){
                         var data = jQuery.parseJSON(JSON.stringify(data));
                         var html = '';
                         for (var i = 0; i < data.result.length; i++) {
-                              html += '<tbody><tr><td>' + data.result[i].id + '</td><td>' + data.result[i].id_user + '</td><td>' + data.result[i].amount + '</td><td>' + data.result[i].image + '</td><td>'</tr></tbody>';
+                              html += '<tbody><tr><td>' + data.result[i].id + '</td><td>' + data.result[i].id_user + '</td><td>' + data.result[i].amount + '</td><td>' + data.result[i].image + '</td></tr></tbody>';
                         }
                         $('.upd').append(html);
           } 
-		  $.ajax({
- url: 'https://k.qzo.su/api/users/viewUPD', 
- type: 'GET',
- datatype: 'json',
- data: {},
- success: function (data) {
-                        table ( data);
-                        console.log("downloaded")
-          },
- error:  function() {
-        alert("Error is occured");
-        }
-    });
     
 $('.sortA').click(function(){
     $.ajax({
-        url: 'https://k.qzo.su/api/users/viewUPDsortA', 
+        url: 'https://k.qzo.su/api/wallets/viewUPDsortA', 
         type: 'GET',
         datatype: 'json',
         data: {},
