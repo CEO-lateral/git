@@ -50,80 +50,80 @@ class PublicWalletsController {
 
 
 public function addUC(){ 
-        $class = new Users();
+        $class = new Wallets();
         $class -> addUC();     
     //level=3&user_type=user&image=1.jpg&nickname=nik&rating=2&description=text1
     }
     
     public function addUPD(){ 
-        $class = new Users();
+        $class = new Wallets();
         $class -> addUPD(); //password=12345&phone=893365563893&phone_token=54321&phone_token_data=543&doc_photo=photo&surname=surname&name=name&patronymic=patronymic&date_of_birth=000000&gender=male&other_data=texttext
     
     }
     
     public function apUPD(){ 
-        $class = new Users();
+        $class = new Wallets();
         $class -> upUPD();         //password=54321&phone=13&phone_token=54321&phone_token_data=543&doc_photo=photo&surname=surname&name=name&patronymic=patronymic&date_of_birth=000000&gender=male&other_data=texttext&id=2
     }
     
     public function upUC(){ 
-        $class = new Users();
+        $class = new Wallets();
         $class -> upUC();         
     //level=3&user_type=user&image=0&nickname=nik&rating=2&description=text1$id=1        
     }
     
     
     public function viewUC(){ 
-        $class = new Users();
+        $class = new Wallets();
         $class -> viewUC();     
     }
     
     public function viewUPD(){ 
-        $class = new Users();
+        $class = new Wallets();
         $class -> viewUPD();     
     }
     
     
     public function viewUCId(){ 
-        $class = new Users();
+        $class = new Wallets();
         $class -> viewUCSel();     
     } 
     
     
     public function insUPD(){ 
-        $class = new Users();
+        $class = new Wallets();
         $class -> insUPD();
     }
     
     public function insUC(){
-        $class = new Users();
+        $class = new Wallets();
         $class -> insUC();
         
     }
     
     public function delUPD(){
-        $class = new Users();
+        $class = new Wallets();
         $class -> delUPD();
         
     }
     public function delUC(){
-        $class = new Users();
+        $class = new Wallets();
         $class -> delUC();   
     }
     public function addUPDforUC(){
-        $class = new Users();
+        $class = new Wallets();
         $class -> addUPDforUC();   
     }
     public function editUPDfree(){
-        $class = new Users();
+        $class = new Wallets();
         $class -> editUPDfree();
     }
     public function viewUPDsortD(){
-        $class = new Users();
+        $class = new Wallets();
         $class -> viewUPDsortD();
     }
     public function viewUPDsortA(){
-        $class = new Users();
+        $class = new Wallets();
         $class -> viewUPDsortA();
     }
 
