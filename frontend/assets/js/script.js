@@ -16,3 +16,53 @@ $(document).ready(function(){
                         }
                         $('.upd').append(html);
           } 
+		  $.ajax({
+ url: 'https://k.qzo.su/api/users/viewUPD', 
+ type: 'GET',
+ datatype: 'json',
+ data: {},
+ success: function (data) {
+                        table ( data);
+                        console.log("downloaded")
+          },
+ error:  function() {
+        alert("Error is occured");
+        }
+    });
+    
+$('.sortA').click(function(){
+    $.ajax({
+        url: 'https://k.qzo.su/api/users/viewUPDsortA', 
+        type: 'GET',
+        datatype: 'json',
+        data: {},
+        success:    function(data){
+                    $('.table').empty();
+                    $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
+                    
+                    table ( data);
+                    console.log("Sort by ASC succsess");
+                    }
+        });
+});
+   
+$('.sortD').click(function(){
+    $.ajax({
+        url: 'https://k.qzo.su/api/users/viewUPDsortD', 
+        type: 'GET',
+        datatype: 'json',
+        data: {},
+        success:    function(data){
+                    
+                    $('.table').empty();
+                    $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
+                    table ( data);
+                    console.log("Sort by DESC succsess");
+                    }
+    });
+});
+    
+    
+
+
+});
