@@ -25,7 +25,7 @@ $(document).ready(function(){
 						console.log("data");
           } 
 		});
-		$('#add').click(function(){
+		$('#showInput').click(function(){
 			console.log("data222");
 		function add (data) {
                         $('.upd').append(html);
