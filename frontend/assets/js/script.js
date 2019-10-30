@@ -12,9 +12,9 @@ $(document).ready(function(){
 	function table (data) {
                         var data = jQuery.parseJSON(JSON.stringify(data));
                         var html = '';
-                       /* for (var i = 0; i < data.result.length; i++) {
+                        for (var i = 0; i < data.result.length; i++) {
                               html += '<tbody><tr><td>' + data.result[i].id + '</td><td>' + data.result[i].id_user + '</td><td>' + data.result[i].amount + '</td><td>' + data.result[i].image + '</td></tr></tbody>';
-                        }*/
+                        }
                         $('.upd').append(html);
 						console.log("data");
           } 
