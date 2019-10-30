@@ -25,6 +25,18 @@ $(document).ready(function(){
 						console.log("data");
           } 
 		});
+		$('#add').click(function(){
+		$.ajax({
+		url: 'https://k.qzo.su/api/wallets/addWallets', 
+        type: 'GET',
+        datatype: 'json',
+        data: {},
+        success:
+		function add (data) {
+                        $('.upd').append(html);
+          } 
+		});
+		});
 	 
     
 $('.sortA').click(function(){
