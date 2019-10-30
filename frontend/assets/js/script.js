@@ -33,7 +33,7 @@ $(document).ready(function(){
         data: {},
         success:
 		function add (data) {
-                        $('.upd').append(html);
+                       // $('.upd').append(html);
           } 
 		});
 		});
