@@ -51,9 +51,7 @@ class PublicWalletsController {
     public function sortDESC(){
         $mywallet12 = new Wallets();
         $mywallet12 -> sortDESC();
-    }
-
-	
+    }	
 }
 
 ?>

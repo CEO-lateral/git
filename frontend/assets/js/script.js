@@ -85,9 +85,11 @@ $(document).ready(function(){
 			});
     })
 	$('#red').click(function(){
-        var id_user = $('#id_user').val();
+        var id = $('#id').val();
+		var id_user = $('#id_user').val();
         var amount = $('#amount').val();
         var image = $('#image').val();
+		$('#id').val('');
         $('#id_user').val('');
         $('#amount').val('');
         $('#image').val('');
@@ -97,7 +99,7 @@ $(document).ready(function(){
             datatype: 'json',
             cache: false,
             contentType: false,
-            data: {id_user: id_user, amount: amount, image: image},
+            data: {id: id,id_user: id_user, amount: amount, image: image},
             success: 
 				function(data){
 					update();
