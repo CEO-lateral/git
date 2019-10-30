@@ -15,7 +15,7 @@ $(document).ready(function(){
                               html += '<tbody><tr><td>' + data.result[i].id + '</td><td>' + data.result[i].id_user + '</td><td>' + data.result[i].amount + '</td><td>' + data.result[i].image + '</td></tr></tbody>';
                         }*/
                         $('.upd').append(html);
-						console.log("wallets");
+						console.log(data);
           } 
     
 $('.sortA').click(function(){
