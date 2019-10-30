@@ -9,10 +9,10 @@ $(document).ready(function(){
         console.log("clear");
     });
 	function table (wallets) {
-                        var data = jQuery.parseJSON(JSON.stringify(data));
+                        var data = jQuery.parseJSON(JSON.stringify(wallets));
                         var html = '';
-                        for (var i = 0; i < data.result.length; i++) {
-                              html += '<tbody><tr><td>' + data.result[i].id + '</td><td>' + data.result[i].id_user + '</td><td>' + data.result[i].amount + '</td><td>' + data.result[i].image + '</td></tr></tbody>';
+                        for (var i = 0; i < wallets.result.length; i++) {
+                              html += '<tbody><tr><td>' + wallets.result[i].id + '</td><td>' + wallets.result[i].id_user + '</td><td>' + wallets.result[i].amount + '</td><td>' + wallets.result[i].image + '</td></tr></tbody>';
                         }
                         $('.upd').append(html);
           } 
