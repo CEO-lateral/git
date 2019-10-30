@@ -27,16 +27,10 @@ $(document).ready(function(){
 		});
 		$('.table').click(function(){
 			console.log("data222");
-		$.ajax({
-		url: 'https://k.qzo.su/api/wallets/addWallets', 
-        type: 'GET',
-        datatype: 'json',
-        data: {},
-        success:
 		function add (data) {
-                       // $('.upd').append(html);
+                        $('.upd').append(html);
           } 
-		});
+		
 		});
 	 
     
