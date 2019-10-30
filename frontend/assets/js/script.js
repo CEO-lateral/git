@@ -21,8 +21,7 @@ $(document).ready(function(){
                         for (var i = 0; i < data.result.length; i++) {
                               html += '<tbody><tr><td>' + data.result[i].id + '</td><td>' + data.result[i].id_user + '</td><td>' + data.result[i].amount + '</td><td>' + data.result[i].image + '</td></tr></tbody>';
                         }
-                        $('.upd').append(html);
-						
+                        $('.upd').append(html);				
           } 
 		});
 		/*$('#showInput').click(function(){
@@ -37,40 +36,35 @@ $('.table').append('<thead><tr><th scope="col">13</th><th scope="col">13</th><th
                         }
                         $('.upd').append(html);
 		}
-	 
-    
 $('#sortASC').click(function(){
     $.ajax({
         url: 'https://k.qzo.su/api/wallets/sortASC', 
         type: 'GET',
         datatype: 'json',
         data: {},
-        success:    function(data){
-                    $('.table').empty();
-                    $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
-                    rap(data);
-                    
-                    }
+        success: 
+			function(data){
+            $('.table').empty();
+            $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
+            rap(data);       
+               }
         });
 });
-   
 $('#sortDESC').click(function(){
     $.ajax({
         url: 'https://k.qzo.su/api/wallets/sortDESC', 
         type: 'GET',
         datatype: 'json',
         data: {},
-        success:    function(data){
-                    
-                    $('.table').empty();
-                    $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
-                    rap(data);
+        success:    
+			function(data){       
+            $('.table').empty();
+            $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
+            rap(data);
                     
                     }
     });
 });
-
-
 $('#showInput').click(function(){
 // var wallet = $('input[name=article_title_new]').val();
            $.ajax({
@@ -91,10 +85,4 @@ $('#showInput').click(function(){
               );
         }
      );
-  	
-
-    
-    
-
-
 });
