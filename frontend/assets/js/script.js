@@ -17,7 +17,7 @@ $(document).ready(function(){
                         $('.upd').append(html);
 						console.log("data");
           } 
-    console.log("data");
+    
 $('.sortA').click(function(){
     $.ajax({
         url: 'https://k.qzo.su/api/wallets/viewWallets', 
