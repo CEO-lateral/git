@@ -8,7 +8,13 @@ $(document).ready(function(){
        $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
         console.log("clear");
     });
-	$.ajax({
+	$('.table').view(function(){
+		$.ajax({
+		url: 'https://k.qzo.su/api/wallets/viewWallets', 
+        type: 'GET',
+        datatype: 'json',
+        data: {},
+        success:
 	function table (data) {
                         var data = jQuery.parseJSON(JSON.stringify(data));
                         var html = '';
@@ -18,7 +24,8 @@ $(document).ready(function(){
                         $('.upd').append(html);
 						console.log("data");
           } 
-		  });
+		});
+	});  
     
 $('.sortA').click(function(){
     $.ajax({
