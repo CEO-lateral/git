@@ -44,21 +44,13 @@ class PublicWalletsController {
 		$mywallet10=new Wallets();
 		$mywallet10->request1Wallets();
 	}
-    public function addUPDforUC(){
-        $class = new Wallets();
-        $class -> addUPDforUC();   
+    public function sortASC(){
+        $mywallet11 = new Wallets();
+        $mywallet11 -> sortASC();
     }
-    public function editUPDfree(){
-        $class = new Wallets();
-        $class -> editUPDfree();
-    }
-    public function viewUPDsortD(){
-        $class = new Wallets();
-        $class -> viewUPDsortD();
-    }
-    public function viewUPDsortA(){
-        $class = new Wallets();
-        $class -> viewUPDsortA();
+    public function sortDESC(){
+        $mywallet12 = new Wallets();
+        $mywallet12 -> sortDESC();
     }
 
 	

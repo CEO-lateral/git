@@ -43,7 +43,7 @@ $('.sortA').click(function(){
                     $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
                     
                     table ( data);
-                    console.log("Sort by ASC succsess");
+                    console.log("Sort by ASC success");
                     }
         });
 });
@@ -59,7 +59,7 @@ $('.sortD').click(function(){
                     $('.table').empty();
                     $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
                     table ( data);
-                    console.log("Sort by DESC succsess");
+                    console.log("Sort by DESC success");
                     }
     });
 });

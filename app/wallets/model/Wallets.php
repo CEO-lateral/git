@@ -135,5 +135,14 @@ class Wallets extends Model{
 			echo('Ошибка');
 		}		
 	}
+	 public function sortASC() {
+            $array1 = Model::table("wallets")->get()->sort("amount", "asc")->send();
+            $this->viewJSON($array1);   
+    }
+    
+    public function sortDESC() {
+            $array1 = Model::table("wallets")->get()->sort("amount", "desc")->send();
+            $this->viewJSON($array1);
+    }
 }	
 ?>
