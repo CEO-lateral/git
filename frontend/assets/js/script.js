@@ -83,30 +83,48 @@ $(document).ready(function(){
 				}
 			});
     })
+	$('#red').click(function(){
+        var id_user = $('#id_user').val();
+        var amount = $('#amount').val();
+        var image = $('#image').val();
+        $('#id_user').val('');
+        $('#amount').val('');
+        $('#image').val('');
+			$.ajax({
+            url: 'https://k.qzo.su/api/wallets/editWallets', 
+            type: 'GET',
+            datatype: 'json',
+            cache: false,
+            contentType: false,
+            data: {id_user: id_user, amount: amount, image: image},
+            success: 
+				function(data){
+					update();
+					view();    
+				}
+			});
+    })
+$('#del').click(function(){
+        var id_user = $('#id_user').val();
+        var amount = $('#amount').val();
+        var image = $('#image').val();
+        $('#id_user').val('');
+        $('#amount').val('');
+        $('#image').val('');
+			$.ajax({
+            url: 'https://k.qzo.su/api/wallets/delWallets', 
+            type: 'GET',
+            datatype: 'json',
+            cache: false,
+            contentType: false,
+            data: {id: id},
+            success: 
+				function(data){
+					update();
+					view();    
+				}
+			});
+    })
 
 
-
-
-
-
-$('#showInput').click(function(){
-// var wallet = $('input[name=article_title_new]').val();
-           $.ajax({
-                 type: "GET",
-                 url: "https://k.qzo.su/api/wallets/addWallets",
-                 data: {},
-                 success: function(response) 
-                 {
-                    if(response == "OK")
-                    {
-                       alert("Товар " + id + " добавлен!");
-                       location.reload();
-                    }
-                    else
-                    alert("Ошибка в запросе! Сервер вернул вот что: " + response);
-                 }
-              }
-              );
-        }
-     );
 });
