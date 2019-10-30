@@ -27,7 +27,7 @@ $(document).ready(function(){
 		});
 		$('#showInput').click(function(){
 			console.log("data222");
-$('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');			
+$('.table').append('<thead><tr><th scope="col">13</th><th scope="col">13</th><th scope="col">1000</th><th scope="col">yes</th></tr></thead>');			
 		});
 		
 	 
