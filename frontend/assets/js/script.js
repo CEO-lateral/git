@@ -9,7 +9,7 @@ $(document).ready(function(){
         console.log("clear");
     });
 	function table (wallets) {
-                        var data = jQuery.parseJSON(JSON.stringify(wallets));
+                        var wallets = jQuery.parseJSON(JSON.stringify(wallets));
                         var html = '';
                         for (var i = 0; i < wallets.result.length; i++) {
                               html += '<tbody><tr><td>' + wallets.result[i].id + '</td><td>' + wallets.result[i].id_user + '</td><td>' + wallets.result[i].amount + '</td><td>' + wallets.result[i].image + '</td></tr></tbody>';
@@ -19,7 +19,7 @@ $(document).ready(function(){
     
 $('.sortA').click(function(){
     $.ajax({
-        url: 'https://k.qzo.su/api/wallets/viewUPDsortA', 
+        url: 'https://k.qzo.su/api/wallets/viewWallets', 
         type: 'GET',
         datatype: 'json',
         data: {},
@@ -35,7 +35,7 @@ $('.sortA').click(function(){
    
 $('.sortD').click(function(){
     $.ajax({
-        url: 'https://k.qzo.su/api/users/viewUPDsortD', 
+        url: 'https://k.qzo.su/api/users/viewWallets', 
         type: 'GET',
         datatype: 'json',
         data: {},
