@@ -26,12 +26,11 @@ $(document).ready(function(){
           } 
 		});
 		$('#showInput').click(function(){
-			console.log("data222");
+			console.log("data222"); 
+		});
 		function add (data) {
                         $('.upd').append(html);
-          } 
-		
-		});
+          }
 	 
     
 $('.sortA').click(function(){
