@@ -8,7 +8,7 @@ $(document).ready(function(){
        $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
         console.log("clear");
     });
-	function table (data) {
+	function table (wallets) {
                         var data = jQuery.parseJSON(JSON.stringify(data));
                         var html = '';
                         for (var i = 0; i < data.result.length; i++) {
