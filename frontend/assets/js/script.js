@@ -7,7 +7,6 @@ $(document).ready(function(){
 		}
          $('.upd').append(html);				
 		} 
-		});
     $('#showInput').click(function(){
         $('#inputs').show(600);        
     });
@@ -20,13 +19,14 @@ $(document).ready(function(){
 			$('.table').empty();
 			$('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>'); 
 }
-	//$('.table').view(function(){
+	function view(){
 		$.ajax({
 		url: 'https://k.qzo.su/api/wallets/viewWallets', 
         type: 'GET',
         datatype: 'json',
         data: {},
         success:
+		function(data){}
 		/*$('#showInput').click(function(){
 			console.log("data222");
 $('.table').append('<thead><tr><th scope="col">13</th><th scope="col">13</th><th scope="col">1000</th><th scope="col">yes</th></tr></thead>');			
