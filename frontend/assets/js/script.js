@@ -30,9 +30,10 @@ $(document).ready(function(){
 			update();
             rap(data);
 			},
-				error:  function() {
-				alert("Ошибка");
-				}
+		error:  
+			function() {
+			alert("Ошибка");
+			}
 		});
 	}
 		display();
