@@ -62,14 +62,27 @@ $(document).ready(function(){
             }
     });
 });
-$('#add').click(function(){
+	$('#add').click(function(){
         var id_user = $('#id_user').val();
         var amount = $('#amount').val();
         var image = $('#image').val();
         $('#id_user').val('');
         $('#amount').val('');
         $('#image').val('');
-      
+			$.ajax({
+            url: 'https://k.qzo.su/api/wallets/addWallets', 
+            type: 'GET',
+            datatype: 'json',
+            cache: false,
+            contentType: false,
+            data: {id_user: id_user, amount: amount, image: image},
+            success: 
+				function(data){
+					update();
+					view();    
+				}
+			});
+    })
 
 
 
