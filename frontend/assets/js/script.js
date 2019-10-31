@@ -103,7 +103,8 @@ $(document).ready(function(){
             success: 
 				function(data){
 					update();
-					view();    
+					view();  
+					alert("Все ок");					
 				}
 			});
     })
