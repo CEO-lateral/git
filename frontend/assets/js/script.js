@@ -93,7 +93,7 @@ $(document).ready(function(){
         var id = $('#id').val();
 		var id_user = $('#id_user').val();
         var amount = $('#amount').val();
-        var image = $('#image').val();
+        var image = $('#image1').val();
 		$('#id').val('');
         $('#id_user').val('');
         $('#amount').val('');
@@ -104,7 +104,7 @@ $(document).ready(function(){
             datatype: 'json',
             cache: false,
             contentType: false,
-            data: {id: id, id_user: id_user, amount: amount, image: image},
+            data: {id: id, id_user: id_user, amount: amount, image: image1},
             success: function(data){
 					update();
 					view();  
