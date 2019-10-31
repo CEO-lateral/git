@@ -45,8 +45,8 @@ $(document).ready(function(){
         data: {},
         success: 
 			function(data){
-                    update();  
-$('.rap').empty();					
+				$('.rap').empty();	
+                    update();  				
                     rap(data);
             }
 			
