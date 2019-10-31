@@ -108,6 +108,7 @@ $(document).ready(function(){
 			});
     });
 $('#del').click(function(){
+	    var id = $('#id').val();
         var id_user = $('#id_user').val();
         var amount = $('#amount').val();
         var image = $('#image').val();
