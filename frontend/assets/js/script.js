@@ -45,7 +45,7 @@ $(document).ready(function(){
         data: {},
         success: 
 			function(data){
-                    update();                   
+                   
                     rap(data);
             }
 		});
