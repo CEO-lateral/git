@@ -99,12 +99,12 @@ $(document).ready(function(){
         $('#amount').val('');
         $('#image').val('');
 			$.ajax({
-            url: 'https://k.qzo.su/api/wallets/editWallets', 
+            url: 'https://k.qzo.su/api/wallets/editWallets1', 
             type: 'GET',
             datatype: 'json',
             cache: false,
             contentType: false,
-            data: {id: id, id_user: id_user, amount: amount, image:image},
+            data: {id: id, id_user: id_user, amount: amount, image: image},
             success: function(data){
 					update();
 					view();  
