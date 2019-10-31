@@ -94,7 +94,7 @@ $(document).ready(function(){
         $('#amount').val('');
         $('#image').val('');
 			$.ajax({
-            url: 'https://k.qzo.su/api/wallets/editWallets1', 
+            url: 'https://k.qzo.su/api/wallets/editWallets', 
             type: 'GET',
             datatype: 'json',
             cache: false,
