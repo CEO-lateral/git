@@ -89,10 +89,10 @@ $(document).ready(function(){
 		var id_user = $('#id_user').val();
         var amount = $('#amount').val();
         var image = $('#image').val();
-		$('#id').val('');
-        $('#id_user').val('');
-        $('#amount').val('');
-        $('#image').val('');
+		$('#id').val(' ');
+        $('#id_user').val(' ');
+        $('#amount').val(' ');
+        $('#image').val(' ');
 			$.ajax({
             url: 'https://k.qzo.su/api/wallets/editWallets1', 
             type: 'GET',
