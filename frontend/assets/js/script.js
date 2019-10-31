@@ -108,7 +108,7 @@ $(document).ready(function(){
             success: function(data){
 					update();
 					view();  
-					alert("Все ок");					
+										
 			}
 			});
     });
