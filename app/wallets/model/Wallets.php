@@ -43,15 +43,15 @@ class Wallets extends Model{
            $array1 = array("id" => $_GET["id"]);
            
                 if (!empty($_GET["id_user"])){
-                    $array2 = array("id_user" => $_GET["id_user"]);
+                    $array1 += array("id_user" => $_GET["id_user"]);
                 }
                 if (!empty($_GET["amount"])){
-                   $array3 = array("amount" => $_GET["amount"]);
+                   $array1 += array("amount" => $_GET["amount"]);
                 }       
                 if (!empty($_GET["image"])){
-                   $array4 = array("image" => $_GET["image"]);
+                   $array1 += array("image" => $_GET["image"]);
                 }
-				Model::table("wallets")->edit($array1,$array2,$array3,$array4, array("id" => $_GET["id"]))->send();
+				Model::table("wallets")->edit($array1, array("id" => $_GET["id"]))->send();
         }
          else{
              echo "Введите id!";
