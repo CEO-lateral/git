@@ -57,7 +57,7 @@ class Wallets extends Model{
              echo "Введите id!";
          }
     }
-	}
+	
 	public function viewWallets(){
 		$array1=Model::table("wallets")->get()->sort("id", "asc")->send();
 		$this->viewJSON($array1);
