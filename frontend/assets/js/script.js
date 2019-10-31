@@ -61,7 +61,7 @@ $(document).ready(function(){
         success:    
 		$('.rap').empty()
 			function(data){
-				$('.rap').empty();
+				$('.rap').empty()
                     update();                   
                     rap(data);
             }
