@@ -44,7 +44,6 @@ $(document).ready(function(){
 		datatype: 'json',
         data: {},
         success: 
-		$('.rap').empty();
 			function(data){
                     update();                   
                     rap(data);
@@ -59,7 +58,6 @@ $(document).ready(function(){
         datatype: 'json',
         data: {},
         success:    
-		$('.rap').empty()
 			function(data){
                     update();                   
                     rap(data);
