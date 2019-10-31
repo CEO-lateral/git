@@ -46,9 +46,10 @@ $(document).ready(function(){
         success: 
 			function(data){
 					
-                    update();  				
+                    update();  
+$('.rap').empty();					
                     rap(data);
-					$('.rap').empty();
+					
             }
 			
 		});
