@@ -49,7 +49,7 @@ $(document).ready(function(){
                     update();                   
                     rap(data);
             }
-			$('.rap').empty();
+			
 		});
 	});
 	$('#sortDESC').click(function(){
@@ -64,7 +64,7 @@ $(document).ready(function(){
                     update();                   
                     rap(data);
             }
-			$('.rap').empty();
+			
     });
 });
 	$('#add').click(function(){
