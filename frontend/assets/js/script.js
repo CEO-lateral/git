@@ -43,7 +43,7 @@ $(document).ready(function(){
 		type: 'GET',
 		datatype: 'json',
         data: {},
-        success: 
+        success: $('.rap').empty();
 			function(data){
 				$('.rap').empty();
                     update();                   
@@ -57,7 +57,7 @@ $(document).ready(function(){
         type: 'GET',
         datatype: 'json',
         data: {},
-        success:    
+        success:    $('.rap').empty();
 			function(data){
 				$('.rap').empty();
                     update();                   
