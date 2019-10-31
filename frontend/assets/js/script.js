@@ -1,5 +1,5 @@
 $(document).ready(function(){    
-    function rap(data){
+    function rap (data){
 		var data = jQuery.parseJSON(JSON.stringify(data));
 		var html = '';
         for (var i = 0; i < data.result.length; i++){
@@ -90,9 +90,9 @@ $(document).ready(function(){
         var amount = $('#amount').val();
         var image = $('#image').val();
 		$('#id').val(' ');
-        $('#id_user').val(' ');
-        $('#amount').val(' ');
-        $('#image').val(' ');
+        $('#id_user').val('');
+        $('#amount').val('');
+        $('#image').val('');
 			$.ajax({
             url: 'https://k.qzo.su/api/wallets/editWallets1', 
             type: 'GET',
