@@ -17,7 +17,7 @@ $(document).ready(function(){
     });
 		function update(){
 			$('.rap').empty();
-			$('.rap').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>'); 
+			//$('.rap').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>'); 
 		}
 	function view(){
 		$.ajax({
@@ -46,7 +46,7 @@ $(document).ready(function(){
         success: 
 			function(data){
                     update();                   
-                   
+                    rap(data);
             }
 		});
 	});
