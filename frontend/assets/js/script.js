@@ -5,7 +5,8 @@ $(document).ready(function(){
         for (var i = 0; i < data.result.length; i++){
         html += '<tbody><tr><td>' + data.result[i].id + '</td><td>' + data.result[i].id_user + '</td><td>' + data.result[i].amount + '</td><td>' + data.result[i].image + '</td></tr></tbody>';
 		}
-         $('.upd').append(html);				
+         $('.upd').append(html);
+$('.rap').empty();			 
 	} 
     $('#showInput').click(function(){
         $('#inputs').show(600);        
