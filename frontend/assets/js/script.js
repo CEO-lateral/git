@@ -46,10 +46,10 @@ $(document).ready(function(){
         success: 
 		$('.rap').empty();
 			function(data){
-				$('.rap').empty()
                     update();                   
                     rap(data);
             }
+			$('.rap').empty();
 		});
 	});
 	$('#sortDESC').click(function(){
@@ -61,10 +61,10 @@ $(document).ready(function(){
         success:    
 		$('.rap').empty()
 			function(data){
-				$('.rap').empty()
                     update();                   
                     rap(data);
             }
+			$('.rap').empty();
     });
 });
 	$('#add').click(function(){
