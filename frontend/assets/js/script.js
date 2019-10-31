@@ -97,7 +97,7 @@ $(document).ready(function(){
 		$('#id').val('');
         $('#id_user').val('');
         $('#amount').val('');
-        $('#image').val('');
+        $('#image1').val('');
 			$.ajax({
             url: 'https://k.qzo.su/api/wallets/editWallets', 
             type: 'GET',
