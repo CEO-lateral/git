@@ -106,7 +106,7 @@ $(document).ready(function(){
 					alert("Все ок");					
 				
 			});
-    })
+    });
 $('#del').click(function(){
         var id_user = $('#id_user').val();
         var amount = $('#amount').val();
