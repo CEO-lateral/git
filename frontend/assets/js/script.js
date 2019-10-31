@@ -11,13 +11,13 @@ $(document).ready(function(){
         $('#inputs').show(600);        
     });
 	$('#clear').click(function() {
-       $('.table').empty();
-       $('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
+       $('.rap').empty();
+       $('.rap').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>');
        console.log("clear");
     });
 		function update(){
-			$('.table').empty();
-			$('.table').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>'); 
+			$('.rap').empty();
+			$('.rap').append('<thead><tr><th scope="col">id</th><th scope="col">id_user</th><th scope="col">amount</th><th scope="col">image</th></tr></thead>'); 
 		}
 	function view(){
 		$.ajax({
