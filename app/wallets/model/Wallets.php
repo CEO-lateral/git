@@ -38,6 +38,26 @@ class Wallets extends Model{
 				echo('Ошибка');
 			}	
 	}	
+	public function editWallets1(){
+		 if (!empty($_GET["id"])){
+           $array1 = array("id" => $_GET["id"]);
+           
+                if (!empty($_GET["id_user"])){
+                    $array1 = array("id_user" => $_GET["id_user"]);
+                }
+                if (!empty($_GET["amount"])){
+                   $array1 = array("amount" => $_GET["amount"]);
+                }       
+                if (!empty($_GET["image"])){
+                   $array1 = array("image" => $_GET["image"]);
+                }
+				Model::table("wallets")->edit($array1, array("id" => $_GET["id"]))->send();
+        }
+         else{
+             echo "Введите id!";
+         }
+    }
+	}
 	public function viewWallets(){
 		$array1=Model::table("wallets")->get()->sort("id", "asc")->send();
 		$this->viewJSON($array1);

@@ -52,6 +52,10 @@ class PublicWalletsController {
         $mywallet12 = new Wallets();
         $mywallet12 -> sortDESC();
     }	
+	public function editWallets1(){
+		$mywallet13=new Wallets();
+		$mywallet13->editWallets1();
+	}
 }
 
 ?>
